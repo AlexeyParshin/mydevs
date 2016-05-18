@@ -241,12 +241,7 @@ class SwingDemo implements ActionListener {
 
 public class Example {
     public static void main(String[] args) {
-        double mass[] = {1,2,3,4};
-        double[] tt;
-        tt = Kordan.pol_root(mass);
 
-        for(double i:tt)
-        System.out.println(i);
 
     }
 }
