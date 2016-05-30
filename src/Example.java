@@ -241,8 +241,6 @@ class SwingDemo implements ActionListener {
 
 public class Example {
     public static void main(String[] args) {
-        int tt1[] = {1,2,3};
-        for(int in:tt1) System.out.print(in + " ");
-
+        /*Some code here.*/
     }
 }
