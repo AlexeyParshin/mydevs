@@ -242,6 +242,6 @@ class SwingDemo implements ActionListener {
 public class Example {
     public static void main(String[] args) {
         /*Some code here.*/
-        /*more code*/
+        /*more more code*/
     }
 }
