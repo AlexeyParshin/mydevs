@@ -1,4 +1,6 @@
-package swingdemopack;
+package SWINGDEMOPACK;
+import javafx.scene.shape.Circle;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -6,6 +8,8 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class SwingDemo implements ActionListener {
+    public static final int WIDTH = 350;
+    public static final int HEIGHT = 300;
     private JFrame jfrm;
     private JLabel jlabContents, f_labs;
     private JTextField jtf;
@@ -15,17 +19,18 @@ public class SwingDemo implements ActionListener {
     private JPanel labPanel;
     private JPanel butPanel;
     private int count;
+    //protected int tt;
 
     public SwingDemo() {
         count = 0;
-        film_list = new ArrayList<String>();
-        FILM_DISP_List = new ArrayList<JLabel>();
+        film_list = new ArrayList<>();
+        FILM_DISP_List = new ArrayList<>();
 
         butPanel = new JPanel();
         labPanel = new JPanel();
         //scrollpanel = new JScrollPane(labPanel);
-        labPanel.setLayout(new BoxLayout(labPanel, BoxLayout.Y_AXIS));
-        butPanel.setLayout(new GridLayout(4,1,10,0));
+        labPanel.setLayout(new BoxLayout(labPanel,BoxLayout.Y_AXIS));
+        butPanel.setLayout(new GridLayout(2, 2));
 
         jfrm = new JFrame("WHATFILM");
         jtf = new JTextField(15);
@@ -35,7 +40,7 @@ public class SwingDemo implements ActionListener {
         //jlabContents.setAlignmentX(JLabel.CENTER);
         //jfrm.setLayout(new FlowLayout());
 
-        jfrm.setSize(350, 300);
+        jfrm.setSize(WIDTH, HEIGHT);
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 

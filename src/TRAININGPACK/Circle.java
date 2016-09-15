@@ -1,9 +1,9 @@
-package trainingpacks;
+package TRAININGPACK;
 
 /**
  * Created by dip17_000 on 17.06.2016.
  */
-public class Circle extends TwoDShape{
+class Circle extends TwoDShape{
     private double radius;
 
     public Circle(double radius, String colour){

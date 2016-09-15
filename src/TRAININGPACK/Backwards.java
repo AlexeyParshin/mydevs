@@ -1,9 +1,9 @@
-package trainingpacks;
+package TRAININGPACK;
 
 /**
  * Created by dip17_000 on 17.06.2016.
  */
-public class Backwards {
+class Backwards {
     String str;
 
     public Backwards(String s) {

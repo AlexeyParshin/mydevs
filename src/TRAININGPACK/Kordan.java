@@ -1,9 +1,9 @@
-package trainingpacks;
+package TRAININGPACK;
 
 /**
  * Created by dip17_000 on 17.06.2016.
  */
-public class Kordan {
+class Kordan {
     public static double[] pol_root(double[] mass){
         double q,r,phi;
         double A[] = new double[3];

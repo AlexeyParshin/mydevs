@@ -1,10 +1,10 @@
-package trainingpacks;
+package TRAININGPACK;
 
 /**
  * Created by dip17_000 on 29.02.2016.
  */
 
-class Quicksort {
+public class Quicksort {
     // Организовать вызов фактического метода быстрой сортировки
     static void qsort(char items[]) {
         qs(items, 0, items.length - 1);
