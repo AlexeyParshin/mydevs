@@ -1,21 +1,92 @@
-import javaBookExamples.*;
-import javaBookExamples.bookpackext.ExtBook;
+import javaBookExamples.Interfaces.ICharQ;
+import TRAININGPACK.CircularQueue;
+import TRAININGPACK.FixedQueue;
+import TRAININGPACK.DynQueue;
+import TRAININGPACK.DynCircularQueue;
 
-public class Example {
+class Example {
     public static void main(String[] args) {
-        ExtBook books[] = new ExtBook[5];
+        FixedQueue ql = new FixedQueue(10);
+        DynQueue q2 = new DynQueue(5);
+        CircularQueue qЗ = new CircularQueue(10);
+        DynCircularQueue q4 = new DynCircularQueue(10);
 
-        books[0] = new ExtBook("Java: А Beginner's Guide", "Schildt", 2007, "Osborne/McGraw-Hill");
-        books[1] = new ExtBook("Java: The Complete Reference", "Schildt", 2007, "Osborne/McGraw-Hill");
-        books[2] = new ExtBook("The Art of Java", "Schildt and Holmes", 2003, "Osborne/McGraw-Hill");
-        books[3] = new ExtBook("Red Storm Rising", "Clancy", 1986, "Putnam");
-        books[4] = new ExtBook("On the Road", "Kerouac", 1955, "Viking");
+        ICharQ iQ;
 
-        for (int i = 0; i < books.length; i++) books[i].show();
+        char ch;
+        int i;
 
-        System.out.println("Showing all books Ьу Schildt.");
-        for (int i = 0; i < books.length; i++)
-            if (books[i].getAuthor() == "Schildt")
-                System.out.println(books[i].getTitle());
+        iQ = ql;
+        // Поместить ряд символов в очередь фиксированного размера
+        for (i = 0; i < 10; i++)
+            iQ.put((char) ('A' + i));
+
+        // Отобразить содержимое очереди
+        System.out.print("Coдepжимoe фиксированной очереди: ");
+        for (i = 0; i < 10; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        System.out.println();
+
+        iQ = q2;
+        // Поместить ряд символов в динамическую очередь
+        for (i = 0; i < 10; i++)
+            iQ.put((char) ('Z' - i));
+
+        // Отобразить содержимое очереди
+        System.out.print("Coдepжимoe динамической очереди: ");
+        for (i = 0; i < 10; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        System.out.println();
+
+        iQ = qЗ;
+        // Поместить ряд символов в кольцевую очередь
+        for (i = 0; i < 10; i++)
+            iQ.put((char) ('A' + i));
+
+        // Отобразить содержимое очереди
+        System.out.print("Coдepжимoe кольцевой очереди: ");
+        for (i = 0; i < 10; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        System.out.println();
+
+        // Поместить больше символов в кольцевую очередь
+        for (i = 10; i < 20; i++)
+            iQ.put((char) ('A' + i));
+
+        // Отобразить содержимое очереди
+        System.out.print("Coдepжимoe кольцевой очереди: ");
+        for (i = 0; i < 10; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+
+        System.out.println("\nCoxpaнeниe и использование данных" +
+                " кольцевой очереди");
+        // Поместить символы в кольцевую очередь и извлечь их оттуда
+        for (i = 0; i < 20; i++) {
+            iQ.put((char) ('A' + i));
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        iQ = q4;
+        // Поместить ряд символов в бесконечную кольцевую очередь
+        for (i = 0; i < 20; i++)
+            iQ.put((char) ('A' + i));
+
+        // Отобразить содержимое очереди
+        System.out.print("Coдepжимoe бесконечной кольцевой очереди: ");
+        for (i = 0; i < 20; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        System.out.println();
     }
 }
+
+
