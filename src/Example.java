@@ -1,8 +1,8 @@
 import javaBookExamples.Interfaces.ICharQ;
-import TRAININGPACK.CircularQueue;
-import TRAININGPACK.FixedQueue;
-import TRAININGPACK.DynQueue;
-import TRAININGPACK.DynCircularQueue;
+import EXERCISESGPACK.CircularQueue;
+import EXERCISESGPACK.FixedQueue;
+import EXERCISESGPACK.DynQueue;
+import EXERCISESGPACK.DynCircularQueue;
 
 class Example {
     public static void main(String[] args) {
@@ -10,6 +10,8 @@ class Example {
         DynQueue q2 = new DynQueue(5);
         CircularQueue qЗ = new CircularQueue(10);
         DynCircularQueue q4 = new DynCircularQueue(10);
+
+        FixedQueue qq = new FixedQueue(15);
 
         ICharQ iQ;
 
@@ -29,7 +31,7 @@ class Example {
         }
         System.out.println();
 
-        iQ = q2;
+       /* iQ = q2;
         // Поместить ряд символов в динамическую очередь
         for (i = 0; i < 10; i++)
             iQ.put((char) ('Z' - i));
@@ -85,7 +87,7 @@ class Example {
             ch = iQ.get();
             System.out.print(ch);
         }
-        System.out.println();
+        System.out.println();*/
     }
 }
 

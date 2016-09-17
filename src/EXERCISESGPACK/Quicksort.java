@@ -1,4 +1,4 @@
-package TRAININGPACK;
+package EXERCISESGPACK;
 
 /**
  * Created by dip17_000 on 29.02.2016.

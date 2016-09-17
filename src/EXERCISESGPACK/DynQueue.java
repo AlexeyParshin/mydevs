@@ -1,4 +1,4 @@
-package TRAININGPACK;
+package EXERCISESGPACK;
 
 import javaBookExamples.Interfaces.ICharQ;
 
