@@ -10,8 +10,11 @@ public interface ICharQ {
 
     void reset();
 
-    static void copy(char[] in,char[] out){
-        for (int i = 0;i < in.length;i++)
-            out[i] = in[i];
+    int getNumCh();
+
+    static void copy(ICharQ in, ICharQ out) {
+        int inNumCh = in.getNumCh();
+        for (int i = 0; i < inNumCh; i++)
+            out.put(in.get());
     }
 }

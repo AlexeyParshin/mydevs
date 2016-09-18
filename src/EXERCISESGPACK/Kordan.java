@@ -15,9 +15,9 @@ class Kordan {
 
         phi = Math.acos(q/Math.pow(r,3));
 
-        A[0] = -2*r*Math.cos(phi/3);
-        A[1] = 2*r*Math.cos((3.14 - phi)/3);
-        A[2] = 2*r*Math.cos((3.14 + phi)/3);
+        A[0] = -2*r*Math.cos(phi/3);//here's a mistake
+        A[1] = 2*r*Math.cos((3.14 - phi)/3);//here's a mistake
+        A[2] = 2*r*Math.cos((3.14 + phi)/3);//here's a mistake
 
         /*System.out.println("q: " + q + " r: " + r);
         for (double i:A) {

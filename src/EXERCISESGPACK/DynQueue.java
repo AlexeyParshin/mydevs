@@ -8,10 +8,12 @@ import javaBookExamples.Interfaces.ICharQ;
 public class DynQueue implements ICharQ {
     private char q[];
     private int putloc, getloc;
+    private int numCh;
 
     public DynQueue(int size) {
         q = new char[size + 1];
         getloc = putloc = 0;
+        numCh = 0;
     }
 
     @Override
@@ -24,6 +26,7 @@ public class DynQueue implements ICharQ {
             q = t;
         }
 
+        numCh++;
         putloc++;
         q[putloc] = ch;
     }
@@ -34,11 +37,17 @@ public class DynQueue implements ICharQ {
     }
 
     @Override
+    public int getNumCh() {
+        return numCh;
+    }
+
+    @Override
     public char get() {
         if (getloc == putloc) {
             System.out.println(" - Очередь пуста");
             return (char) 0;
         }
+        numCh--;
         getloc++;
         return q[getloc];
     }

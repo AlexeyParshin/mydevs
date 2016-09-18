@@ -8,10 +8,12 @@ import javaBookExamples.Interfaces.ICharQ;
 public class FixedQueue implements ICharQ {
     private char q[];
     private int putloc, getloc;
+    private int numCh;
 
     public FixedQueue(int size) {
         q = new char[size + 1];
         getloc = putloc = 0;
+        numCh = 0;
     }
 
     @Override
@@ -20,6 +22,7 @@ public class FixedQueue implements ICharQ {
             System.out.println(" - Очередь заполена");
             return;
         }
+        numCh++;
         putloc++;
         q[putloc] = ch;
     }
@@ -30,8 +33,14 @@ public class FixedQueue implements ICharQ {
             System.out.println(" - Очередь пуста");
             return (char) 0;
         }
+        numCh--;
         getloc++;
         return q[getloc];
+    }
+
+    @Override
+    public int getNumCh() {
+        return numCh;
     }
 
     @Override
