@@ -2,6 +2,8 @@ import javaBookExamples.exceptionPack.excDemo;
 
 public class Example2 {
     public static void main(String[] args) {
-        excDemo demo = new excDemo();
+
+        System.out.println((int)'A');
+        System.out.println((int)'a');
     }
 }

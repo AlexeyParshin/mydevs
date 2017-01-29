@@ -4,13 +4,13 @@ package javaBookExamples.exceptionPack;
  * Created by dip17_000 on 25.09.2016.
  */
 
-class arrays {
+class DemoArrays {
     private String[] nStrArray;
     private String[] dStrArray;
     private int nlgt;
     private int dlgt;
 
-    arrays() {
+    DemoArrays() {
         nStrArray = "1,2,32,54,1,54,43".split(",");
         dStrArray = "0,34,0,12,54,25".split(",");
         nlgt = nStrArray.length;
@@ -19,14 +19,14 @@ class arrays {
 
     void showNumer() {
         for (String str : nStrArray) {
-            System.out.print(str+" ");
+            System.out.print(str + " ");
         }
         System.out.println();
     }
 
     void showDenom() {
         for (String str : dStrArray) {
-            System.out.print(str+" ");
+            System.out.print(str + " ");
         }
         System.out.println();
     }
@@ -53,12 +53,12 @@ class arrays {
 
 public class excDemo {
     public excDemo() {
-        arrays obj = new arrays();
+        DemoArrays obj = new DemoArrays();
         String res = new String();
 
         for (int i = 0; (i < obj.getnumerLenght()) && (i < obj.getdenomLenght()); i++) {
             try {
-                res+=String.format("%.2f",((double) obj.get_nNumber(i) / (double) obj.get_dNumber(i)));
+                res += String.format("%.2f", ((double) obj.get_nNumber(i) / (double) obj.get_dNumber(i)));
                 if ((i != obj.getnumerLenght() - 1) && (i != obj.getdenomLenght() - 1)) {
                     res += ", ";
                 }

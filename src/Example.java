@@ -4,6 +4,7 @@ import EXERCISESGPACK.FixedQueue;
 import EXERCISESGPACK.DynQueue;
 import EXERCISESGPACK.DynCircularQueue;
 
+
 class Example {
     public static void main(String[] args) {
         FixedQueue ql = new FixedQueue(10);
@@ -11,7 +12,6 @@ class Example {
         CircularQueue qЗ = new CircularQueue(10);
         DynCircularQueue q4 = new DynCircularQueue(10);
         FixedQueue qq = new FixedQueue(15);
-
 
         ICharQ iQ;
 

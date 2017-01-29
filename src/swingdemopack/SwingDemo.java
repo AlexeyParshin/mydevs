@@ -1,5 +1,4 @@
 package SWINGDEMOPACK;
-import javafx.scene.shape.Circle;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,7 +28,7 @@ public class SwingDemo implements ActionListener {
         butPanel = new JPanel();
         labPanel = new JPanel();
         //scrollpanel = new JScrollPane(labPanel);
-        labPanel.setLayout(new BoxLayout(labPanel,BoxLayout.Y_AXIS));
+        labPanel.setLayout(new BoxLayout(labPanel, BoxLayout.Y_AXIS));
         butPanel.setLayout(new GridLayout(2, 2));
 
         jfrm = new JFrame("WHATFILM");
@@ -70,7 +69,7 @@ public class SwingDemo implements ActionListener {
                 jlabContents.setText("YOU ARE A FUCKFACE");
             } else {
                 int rd = 0;
-                for(int i = 0;i < 3; i++)
+                for (int i = 0; i < 3; i++)
                     rd = (int) (Math.random() * count);
 
                 jlabContents.setText(film_list.get(rd));

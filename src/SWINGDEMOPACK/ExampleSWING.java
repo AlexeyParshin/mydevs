@@ -1,3 +1,5 @@
+package SWINGDEMOPACK;
+
 import SWINGDEMOPACK.SwingDemo;
 
 import javax.swing.*;
